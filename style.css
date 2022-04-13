@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+button, input, textarea{
+    outline: none;
+    border: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --color1 :  rgb(137, 22, 204);
+    --color2 : rgb(255, 255, 255);
+    --color3 : rgb(94, 94, 94);
+    --color4 : rgb(0, 119, 255);
+    
+    --color1hv :  rgb(160, 36, 231);
+    --color2hv : rgb(248, 248, 248);
+    
+    --background1 : #16233f;
+    --background2 : #8921ff;
+    --background3 : linear-gradient(-70deg,rgb(45, 222, 253) 0%,rgb(17, 247, 113) 100%);
+    --background4 : linear-gradient(-70deg,#db469f 0%, #215cff 100%);
+    --shadow : 0px 3px 15px rgba(204, 204, 204, 0.904);   
+}
+
+/* empieza el proyecto*/
+
+/* navegador*/
+
+.container-nav{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    grid-gap: 20px; 
+    height: 10vh;
+    position: sticky; 
+    z-index: 15;
+    top: 0;
+    background: rgb(255, 255, 255);
+}
+.container-nav a{
+    position: relative;
+    color: var(--color3);
+    font-size: 14px;
+    padding: 10px;
+}
+.container-nav a:after{
+    transition:all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    padding: 1.2px; border-radius: 3px;
+    width: 0%;
+}
+.container-nav a:hover:after{
+    background:var(--background2); 
+    width: 100%;
+    left: 0%;
+}
+.container-nav i{
+    display: none;
+    font-size: 20px;
+    transition: 0.1s ease-in-out;
+}
+.container-nav .girar{
+    transform: rotate(90deg)
+}
+
+@media screen and (max-width:700px) {
+    .container-nav{
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+    .container-nav i{
+        display: flex;
+    }
+    .container-nav div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        opacity: 0;
+        top: 59px;
+        left: 100vh;
+        text-align: center;
+        width: 0;
+        height: 100vh;
+        display: none;
+    }
+    .container-nav a:hover:after{
+        background: var(--background3);
+    }
+    .container-nav div a{
+        color: #fff;
+        width: 200px;
+    }
+}
+.container-nav .active{
+    opacity: 1;
+    width: 100%;
+    transition: 0.3s ease-out;
+    background-color: #6e1cda;
+    display: flex;
+    left: 0vh; 
+}
+/* sección principal*/
+
+.container-main{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    grid-gap: 10px; 
+    margin-top: 50px;
+    height: 68vh;
+}
+.container-main .content{
+    display:grid;
+    grid-gap: 10px;
+    margin-bottom: 80px;
+}
+.container-main .content h1{
+    
+    font-size: 4em;
+    line-height: 1;
+    color: var(--background3);
+}
+.container-main .content h1 span {
+    background: linear-gradient(-70deg,#db469f 0%, #215cff 100%);
+    -webkit-background-clip: text;
+    color: transparent;  
+}
+.container-main .content p{
+    color: var(--color3);
+}
+.container-main .content .buttons{
+    grid-gap: 10px;
+    display: flex;
+    justify-content: initial;
+    align-items: center;  
+}
+.container-main .buttons a{
+    text-align: center;
+    background: rgb(101, 59, 255);
+    padding: 10px;
+    width: 140px;
+    transition: 0.2s;
+    color: var(--color2);
+    font-size: 13px;
+    border-radius: 3px;
+}
+.container-main .buttons a:nth-child(2){
+    color: var(--color3); 
+    background: var(--color2);
+    box-shadow: var(--shadow);
+}
+.container-main div .img2{
+    display: none;
+}
+@media screen and (max-width:1000px) {
+    .container-main{
+        grid-gap: 0;
+        padding: 12px;
+    }
+    .container-main .content{
+        text-align: center;
+    }
+    .container-main .content .buttons{
+        justify-content: center;
+    }
+    .container-main div img{
+        display: none;
+    }
+    .container-main div .img2{
+        display: block;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        width: 200px;
+    }
+}
+/* seccion acerca de mi*/
+
+.container-about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 110vh;
+    clip-path: ellipse(220% 100% at 50% 100%);
+    background: linear-gradient(0deg,#4801cc 0%, #4801cc 100%);
+    flex-direction: column;
+    grid-gap: 20px;
+}
+.container-about-me h1{
+    background: linear-gradient(70deg,#2ddefd 0%, #11f771 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.container-about-me .card{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    place-items: center;
+    grid-gap: 20px;
+    width: 550px;   
+}
+.container-about-me .card div{
+    background: linear-gradient(70deg,#2ddefd 0%, #11f771 100%);
+    padding: 5px;
+    border-radius: 8px;
+}
+.container-about-me .card div img{
+    height: 180px;
+}
+.container-about-me .card p{
+    color: #fff;
+    font-size: 15px;
+}
+@media screen and (max-width:1000px) {
+    .container-about-me .card{
+        width: 310px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }   
+}
+@media screen and (max-width:500px) {
+    .container-about-me .card{
+       width: 90%;
+    }
+}
+
+/* seccionproyectos*/
+.container-proyects{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column;
+    height: 100vh;
+    grid-gap: 20px;
+}
+.container-proyects h1{
+    background: linear-gradient(70deg,#2ddefd 0%, #11f771 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.container-proyects .box-card {
+    justify-content: center;
+    display: flex;
+    grid-gap: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.container-proyects .box-card div img{
+    width: 350px;
+}
+@media screen and (max-width:500px) {
+    .container-proyects .box-card .card img{
+        width: 90%;
+    }
+}
+
+/* seccion contactos*/
+
+.container-contact{
+    display: flex;
+    grid-gap: 40px;
+    text-align: center;
+    flex-direction: column;
+}
+.container-contact h1{
+    background: linear-gradient(-70deg,#00cbfd 0%, #c800fa 100%);
+    -webkit-background-clip: text;
+    color: transparent;    
+}
+.container-contact .card{
+    align-items:flex-end ;
+    background-color:var(--color1);
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.container-contact .card form{
+    position: absolute;
+    top: -20px;
+    box-shadow: 0px 10px 20px  #0005;
+    background: var(--background4);
+    border-radius: 3px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 410px;
+}
+.container-contact .card  form input, textarea{
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    padding:5px;
+    border-radius: 0px;
+    color: #fff;
+}
+.container-contact .card  form input::placeholder, textarea::placeholder{
+    color: rgba(255, 255, 255, 0.623)
+}
+.container-contact .card form button{
+    background: var(--background3);
+    color: var(--color2);
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.container-Links{
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    grid-gap: 20px;  
+}
+.container-Links a{
+    display: flex;  
+    flex-direction: column;
+}
+.container-Links a i{
+    font-size: 22px; 
+    background: linear-gradient(-70deg, #1fff32 0%, #39b0ff 100%);
+    -webkit-background-clip: text;
+    color: transparent;  
+}
+.container-Links a i:hover{
+    transform: scale(1.03);
+    font-weight: 0;
+    color:rgb(57, 176, 255);
+}
+.container-Links a p{
+    font-size: 12px; 
+    font-weight: 600;
+    background: linear-gradient(-70deg, #1fff32 0%, #39b0ff 100%);   
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@media screen and (max-width:500px) {
+    .container-contact .card form{
+        width: 90%;
+    }
+}
+
+/* seccion pie de página*/
+
+.container-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: var(--color1);
+    flex-direction: column;
+    height: 100px;
+    color: var(--color2);
+    font-size: 10px;
+    font-weight: 100;
+}
+.container-footer span span{
+    background: linear-gradient(70deg,rgb(12, 247, 247) 0%, rgb(255, 252, 58) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    font-size: 12px;
+}
