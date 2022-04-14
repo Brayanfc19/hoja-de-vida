@@ -45,15 +45,17 @@ html{
     position: sticky; 
     z-index: 15;
     top: 0;
-    background: rgb(255, 255, 255);
+    color: #c800fa;
+    background-color: #fff; 
+    
 }
-.container-nav a{
+.container-nav div a{
     position: relative;
     color: var(--color3);
     font-size: 14px;
     padding: 10px;
 }
-.container-nav a:after{
+.container-nav div a:after{
     transition:all 0.2s ease-in-out;
     content: "";
     position: absolute;
@@ -62,7 +64,7 @@ html{
     padding: 1.2px; border-radius: 3px;
     width: 0%;
 }
-.container-nav a:hover:after{
+.container-nav div  a:hover:after{
     background:var(--background2); 
     width: 100%;
     left: 0%;
@@ -72,15 +74,13 @@ html{
     font-size: 20px;
     transition: 0.1s ease-in-out;
 }
-.container-nav .girar{
-    transform: rotate(90deg)
-}
+
 
 @media screen and (max-width:700px) {
     .container-nav{
-        transition: all 0.5s ease-in-out;
+        transition: 0.2s ;
         justify-content: space-between;
-        padding: 10px 15px;
+        padding: 10px 30px;
     }
     .container-nav i{
         display: flex;
@@ -106,6 +106,7 @@ html{
     .container-nav div a{
         color: #fff;
         width: 200px;
+        font-size: 16px;
     }
     .container-nav .active{
         right: 0vh; 
@@ -114,6 +115,10 @@ html{
     .color{
         background: #6e1cda;
         color: #1fff32;
+        
+    }
+    .container-nav .girar{
+        transform: rotate(90deg)
     }
 }
 /* sección principal*/
@@ -248,7 +253,7 @@ html{
     justify-content: center;
     align-items: center;  
     flex-direction: column;
-    height: 110vh;
+    height: 100vh;
     grid-gap: 20px;
 }
 .container-proyects h1{
