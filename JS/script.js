@@ -45,7 +45,7 @@ gsap.to("#efect1",{
 //  efecto write
 
 new Typed(".typed", {
-    strings: ["Brayan Farro", "Developer Web", "Developer Android"],
+    strings: ["Brayan Farro", "Developer Web"],
     loop:true,
     typeSpeed:75,
     backSpeed:75
