@@ -12,10 +12,8 @@
 
 <body id="home">
     <!-- Este es el navegador -->
-    <nav class="container-nav">
-        <header>
-          <h2 >Breakman!</h2>
-        </header>
+    <header class="container-nav">
+        <h2 >Breakman!</h2>
         <div class="menu">
           <a class="item" href='#home'>Inicio</a>
           <a class="item" href='#about'>Acerca de</a>
@@ -24,23 +22,23 @@
           <a class="item" href='#contact'>Contactame</a>
         </div>
         <i class="fa-solid fa-bars"></i>
-      </nav>
+      </header>
 
     <!-- Este es la priemra sección -->
 
     <main class="container-main" >
         <div class="content">
-            <h1>¡Hola! soy <br/><span >Brayan Farro</span></h1>
-            <p >Ing. de Software / Desarrollador Web</p>
+            <h1 id="efect1" >¡Hola! soy <br/><span class="typed"></span></h1>
+            <p id="efect1" >Ing. de Software / Desarrollador Web</p>
             <div class="buttons">
-                <a href="files/Curriculum.pdf" target="_blank" >Descargar CV</a>
-                <a >Contáctame</a>
+                <a id="efect1" href="files/Curriculum.pdf" target="_blank" >Descargar CV</a>
+                <a id="efect1" href="#contact" >Contáctame</a>
             </div>
         </div>
         <div>
-            <img src="img/developer1.png"  >
+            <img src="img/developer1.png" id="efect1">
         </div>
-        <div class="img2"><img class="img2" src="img/pc.png" /></div>
+        <div class="img2" ><img class="img2" src="img/pc.png" id="efect1"/></div>
     </main>
 
     <!-- Este es la priemra sección -->
@@ -48,7 +46,7 @@
     <section class="container-about-me" id="about">
         <h1>Acerca de mí</h1>
         <div class="card">
-          <div>
+          <div id="efect1">
             <Image src="img//developer.png" />
           </div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, laudantium. Corrupti laudantium molestiae nostrum quam cum autem. Numquam ea aperiam rem distinctio iure sint modi iusto, molestias provident. Itaque, magni.</p>
@@ -77,7 +75,7 @@
     <section class="container-contact" id="contact">
         <h1>Contáctame</h1>
         <div class="card"> 
-            <form>
+            <form id="efect1">
               <input type="text" placeholder="Nombre">
               <input type="email" placeholder="correo@mail.com">
               <textarea  placeholder="Escribe el texto"></textarea>
@@ -111,7 +109,8 @@
         <span>Todos los Derechos Reservados</span>
     </footer>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="./JS/script.js"></script>
 <script src="https://kit.fontawesome.com/da311506bc.js" crossorigin="anonymous"></script>
 </body>

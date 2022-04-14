@@ -14,3 +14,31 @@ menu.addEventListener("click", ()=> {
     menu.classList.remove("active")
     nav.classList.remove("color")
 })
+
+gsap.from(".container-nav",{
+    y:"-100"
+})
+gsap.to(".container-nav",{
+    y:"0",
+    
+})
+
+gsap.from("#efect1",{
+    opacity:0,
+    y:200,
+})
+gsap.to("#efect1",{
+    opacity:1, 
+    y:-0, 
+    ease:"bounce", 
+    stagger:"0.5",
+    delay:1.1
+})
+
+
+new Typed(".typed", {
+    strings: ["Brayan Farro", "Developer"],
+    loop:true,
+    typeSpeed:75,
+    backSpeed:75
+})
