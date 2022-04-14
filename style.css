@@ -45,7 +45,7 @@ html{
     justify-content: center;
     align-items: center;  
     grid-gap: 50px; 
-    height: 10vh;
+    height: 80px;
     position: sticky; 
     z-index: 15;
     top: 0;
@@ -85,7 +85,6 @@ html{
         justify-content: space-between;
         padding: 10px 30px;
         transition: 0.1s ;
-        height: 10vh;
     }
     .container-nav i{
         display: flex;
@@ -101,7 +100,7 @@ html{
         flex-direction: column;
         align-items: center;
         text-align: center;
-        top: 59px;
+        top: 80px;
         height: 90vh;
         transition: 0.3s ease-out;
         right: 100vh;
