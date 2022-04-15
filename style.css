@@ -29,7 +29,7 @@ html{
     --color1hv : #a024e7;
     --color2hv : #f8f8f8;
     
-    --background1 : #480480;
+    --background1 : #58069b;
     --background2 : #8921ff;
     --background3 : linear-gradient(-70deg,#2ddefd 0%,#11f771 100%);
     --background4 : linear-gradient(-70deg,#db469f 0%,#215cff 100%);
@@ -323,7 +323,7 @@ html{
 }
 .container-proyects .box-card .card{
     box-shadow: var(--shadow);
-    background: linear-gradient(-70deg,#11f7b2 30%, #2dfdb8 70%);
+    background: var(--background2);
     overflow: hidden;
     border-radius: 5px;
     width: 350px;
@@ -333,7 +333,7 @@ html{
     content: "";
     position: absolute;
     padding: 100px;
-    background: linear-gradient(-10deg,#ad1df0, #11f7b2 );
+    background: linear-gradient(10deg,rgb(134, 43, 219) 50% ,rgb(101, 28, 219));
     border-radius: 50%;
     left: 60%;
     top: 60%;
@@ -352,14 +352,23 @@ html{
     display: flex;
     grid-gap: 5px;
 }
+.container-proyects .box-card .card div h3{
+    color:var(--color5);
+}
 .container-proyects .box-card .card div p{
-    font-size: 15px;
+    font-size: 14px;
     color: #fff;
     z-index: 10;
 }
-.container-proyects .box-card .card div a i{
-    color: var(--background1);
-    font-size: 22px;
+.container-proyects .box-card .card div a{
+    font-size: 14px;
+    display: flex; align-items: center;
+    grid-gap: 5px;
+    background:var(--background1);
+    z-index: 10;
+    padding: 10px;
+    border-radius: 3px;
+    color: #fff;
 }
 @media screen and (max-width:500px) {
     .container-proyects .box-card .card{
@@ -449,7 +458,7 @@ html{
     color: transparent;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:520px) {
     .container-contact .card form{
         width: 90%;
     }
