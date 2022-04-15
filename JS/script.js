@@ -39,7 +39,16 @@ gsap.to("#efect1",{
     scale:1,
     ease:"elastic", 
     stagger:"0.4",
-
+})
+gsap.set("#efect2",{
+    opacity:0,
+    scale:-10
+})
+gsap.to("#efect2",{
+    opacity:1, 
+    scale:1.5,
+    ease:"elastic", 
+    stagger:"0.4",
 })
 
 //  efecto write

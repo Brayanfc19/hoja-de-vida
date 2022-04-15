@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 h1{
-    font-size: 27px;
+    font-size: 30px;
 }
 a{
     text-decoration: none;
@@ -148,8 +148,6 @@ html{
     justify-content: center;
 }
 .container-main .content-img{
-    display: flex;
-    justify-content: center;
     position: relative;
 }
 .container-main .content-img img{
@@ -161,23 +159,23 @@ html{
 .container-main .content-img img:hover{
     filter: brightness(120%) saturate(120%);
 }
-.container-main .content-img img:nth-child(1){
+.container-main .content-img .image1 img{
     background: linear-gradient(70deg,#2ddefd 0%, var(--color4) 100%);
     top: 50px;
     left: 40px;
 }
-.container-main .content-img img:nth-child(2){
+.container-main .content-img .image2 img{
     background: var(--color1);
     top: 50px;
     left: 250px;
 }
-.container-main .content-img img:nth-child(3){
+.container-main .content-img .image3 img{
     background: var(--background1);
     width: 300px;
     left: 0;
     top: 150px;
 }
-.container-main .content-img img:nth-child(4){
+.container-main .content-img .image4 img{
     background: linear-gradient(-70deg,#db469f 0%, #215cff 100%);
     width: 300px;
     top: 200px;
@@ -218,8 +216,12 @@ html{
     background: var(--color2);
     box-shadow: var(--shadow);
 }
-.container-main div .img2{
-    display: none;
+.container-main .cliph img{
+    position: absolute;
+    bottom: -10;
+    left: 0;
+    z-index: -10;
+    width: 100%;
 }
 @media screen and (max-width:1000px) {
     .container-main{
@@ -313,16 +315,35 @@ html{
 .container-proyects .box-card {
     justify-content: center;
     display: flex;
-    grid-gap: 10px;
+    grid-gap: 20px;
     flex-wrap: wrap;
     text-align: center;
 }
-
-.container-proyects .box-card div img{
+.container-proyects .box-card .card{
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    padding: 10px;
     width: 350px;
 }
+.container-proyects .box-card .card img{
+    width: 100%;
+}
+.container-proyects .box-card .card div{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+}
+.container-proyects .box-card .card div a{
+    background: var(--color1);
+    color: var(--color2);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
 @media screen and (max-width:500px) {
-    .container-proyects .box-card .card img{
+    .container-proyects .box-card .card{
         width: 90%;
     }
 }
@@ -425,7 +446,7 @@ html{
     flex-direction: column;
     height: 100px;
     color: var(--color2);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 100;
 }
 .container-footer span span{
