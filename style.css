@@ -29,7 +29,7 @@ html{
     --color1hv : #a024e7;
     --color2hv : #f8f8f8;
     
-    --background1 : #3e0894;
+    --background1 : #480480;
     --background2 : #8921ff;
     --background3 : linear-gradient(-70deg,#2ddefd 0%,#11f771 100%);
     --background4 : linear-gradient(-70deg,#db469f 0%,#215cff 100%);
@@ -135,6 +135,7 @@ html{
 /* sección principal*/
 
 .container-main{
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px; 
@@ -142,6 +143,8 @@ html{
     padding: 0 7em;
 }
 .container-main .content{
+    padding: 0 10px;
+    padding-top: 40px;
     display:flex;
     flex-direction: column;
     grid-gap: 10px;
@@ -304,43 +307,59 @@ html{
     justify-content: center;
     align-items: center;  
     flex-direction: column;
-    height: 100vh;
-    grid-gap: 20px;
+    grid-gap: 20px 0;
+    padding: 2em;
 }
 .container-proyects h1{
-    background: linear-gradient(70deg,#2ddefd 0%, #11f771 100%);
+    background: var(--background4);
     -webkit-background-clip: text;
     color: transparent;
 }
 .container-proyects .box-card {
     justify-content: center;
     display: flex;
-    grid-gap: 20px;
+    grid-gap: 30px;
     flex-wrap: wrap;
-    text-align: center;
 }
 .container-proyects .box-card .card{
     box-shadow: var(--shadow);
+    background: linear-gradient(-70deg,#11f7b2 30%, #2dfdb8 70%);
+    overflow: hidden;
     border-radius: 5px;
-    padding: 10px;
     width: 350px;
+    position: relative;
+}
+.container-proyects .box-card .card::after{
+    content: "";
+    position: absolute;
+    padding: 100px;
+    background: linear-gradient(-10deg,#ad1df0, #11f7b2 );
+    border-radius: 50%;
+    left: 60%;
+    top: 60%;
 }
 .container-proyects .box-card .card img{
     width: 100%;
 }
-.container-proyects .box-card .card div{
-    height: 40px;
+.container-proyects .box-card .card>div{
+    height: fit-content;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-gap: 20px;
+    flex-direction: column;
+    padding: 14px 20px;
+    grid-gap: 5px;
 }
-.container-proyects .box-card .card div a{
-    background: var(--color1);
-    color: var(--color2);
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-size: 14px;
+.container-proyects .box-card .card div>div{
+    display: flex;
+    grid-gap: 5px;
+}
+.container-proyects .box-card .card div p{
+    font-size: 15px;
+    color: #fff;
+    z-index: 10;
+}
+.container-proyects .box-card .card div a i{
+    color: var(--background1);
+    font-size: 22px;
 }
 @media screen and (max-width:500px) {
     .container-proyects .box-card .card{
