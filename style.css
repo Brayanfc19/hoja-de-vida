@@ -308,7 +308,7 @@ html{
     align-items: center;  
     flex-direction: column;
     grid-gap: 25px 0;
-    padding: 15em 0;
+    padding: 10em 0;
 }
 .container-proyects h1{
     background: var(--background4);
