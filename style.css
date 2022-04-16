@@ -307,8 +307,8 @@ html{
     justify-content: center;
     align-items: center;  
     flex-direction: column;
-    grid-gap: 20px 0;
-    padding: 2em;
+    grid-gap: 25px 0;
+    padding: 15em 0;
 }
 .container-proyects h1{
     background: var(--background4);
@@ -333,15 +333,16 @@ html{
     content: "";
     position: absolute;
     padding: 100px;
-    background: linear-gradient(10deg,rgb(134, 43, 219) 50% ,rgb(101, 28, 219));
+    background: linear-gradient(10deg,rgb(134, 34, 228) 50% ,rgb(101, 28, 219));
     border-radius: 50%;
     left: 60%;
-    top: 60%;
+    top: 65%;
 }
 .container-proyects .box-card .card img{
     width: 100%;
 }
-.container-proyects .box-card .card>div{
+
+.container-proyects .box-card .card > div{
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -353,7 +354,9 @@ html{
     grid-gap: 5px;
 }
 .container-proyects .box-card .card div h3{
-    color:var(--color5);
+    background: var(--background3);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 .container-proyects .box-card .card div p{
     font-size: 14px;
